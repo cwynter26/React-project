@@ -57,11 +57,11 @@ function Genres() {
             } else {
                 setMovies([]);
             }
-        }, [selectedGenre]);
+        }, [selectedGenre, searchTerm]);
 
     return (
         <main className="genres__page">
-            <h1>{selectedGenre}Movies</h1>
+            <h1>{selectedGenre} Movies</h1>
 
             <GenreNav />
             {loading && <p>Loading movies...</p>}

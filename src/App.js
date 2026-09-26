@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/Home';
-import GenreNav from './components/GenreNav';
 import MovieGrid from './components/MovieGrid';
 import MovieDetails from './pages/MovieDetails';
 import Genres from "./pages/Genres";
@@ -34,7 +33,7 @@ function App() {
 
     try {
       const apiKey = process.env.REACT_APP_OMDB_API_KEY;
-      const searchUrl = `https://www.omdbapi.com/?apikey=${apiKey}` + `&s=${encodeURIComponent(search)}` + `&type=movie`;
+      const searchUrl = `https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(search)}&type=movie`;
       const response = await fetch(searchUrl);
       const data = await response.json();
 
@@ -47,7 +46,7 @@ function App() {
 
       const movieResults = await Promise.all(
         data.Search.map(async (movie) => {
-          const detailsUrl = `https://www.omdbapi.com/?apikey=${apiKey}` + `&i=${movie.imdbID}` + `&plot=short`;
+          const detailsUrl = `https://www.omdbapi.com/?apikey=${apiKey}&i=${movie.imdbID}&plot=short`;
           const detailsResponse = await fetch(detailsUrl);
           return detailsResponse.json();
         })

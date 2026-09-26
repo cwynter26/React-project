@@ -12,7 +12,7 @@ function MovieDetails() {
     async function getMovieDetails() {
         try {
             const apiKey = process.env.REACT_APP_OMDB_API_KEY;
-            const detailsUrl = `https://www.omdbapi.com/?apikey=${apiKey}` + `&i=${imdbID}` + `&plot=full`;
+            const detailsUrl = `https://www.omdbapi.com/?apikey=${apiKey}&i=${imdbID}&plot=full`;
             const response = await fetch(detailsUrl);
             const data = await response.json();
             if (data.Response === "False") {
