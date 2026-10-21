@@ -5,6 +5,7 @@ import Home from './components/Home';
 import MovieGrid from './components/MovieGrid';
 import MovieDetails from './pages/MovieDetails';
 import Genres from "./pages/Genres";
+import About from "./pages/About";
 
 import './App.css';
 
@@ -110,15 +111,7 @@ function App() {
         {/*About */}
         <Route
           path="/about" element={
-            <main>
-              <section className="movie__section">
-                <div className="section__heading">
-                  <p className="small__title">ABOUT CINEVERSE</p>
-                  <h2>Welcome to CineVerse</h2>
-                  <p>Discover movies, explore different genres and find your next favorite film.</p>
-                </div>
-              </section>
-            </main>
+              <About />
           }
         />
       </Routes>
