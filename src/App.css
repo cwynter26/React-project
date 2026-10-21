@@ -199,7 +199,9 @@ nav {
     border-radius: 14px;
     overflow: hidden;
     cursor: pointer;
-    transition: 0.35 ease;
+    transition: 0.35s ease,
+    border-color 0.35s ease, 
+    box-shadow 0.35s ease;
 }
 
 .movie__card:hover {
