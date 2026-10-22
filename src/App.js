@@ -122,6 +122,7 @@ function App() {
           Cine<span>Verse</span>
         </div>
         <p>Discover. Search. Watch. Repeat.</p>
+        <p>&copy; {new Date().getFullYear()} CINEVERSE. Built by Courtney Wynter. All rights reserved.</p>
       </footer>
     </>
   );

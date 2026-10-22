@@ -2,6 +2,7 @@ import SearchBar from './SearchBar';
 
 function Home({ searchTerms, setSearchTerms, onSearch }) {
   return (
+    <>
     <main className="home__page">
       <section id="home" className="title">
         <div className="title__content">
@@ -49,6 +50,7 @@ function Home({ searchTerms, setSearchTerms, onSearch }) {
         </div>
       </section>
     </main>
+    </>
   );
 }
 
